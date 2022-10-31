@@ -57,15 +57,15 @@ if (!args[0]) {
     let i = 0;
     for (const redirect of data.urls) {
         i++;
-        console.log(`Loaded URL ${i}/${data.urls.length}`);
+        console.log(`Loaded URL ${redirect} (${i}/${data.urls.length})`);
         await page.goto(redirect);
 
-        await page.waitForSelector("#CopyDownloadURL")
+        await page.waitForSelector("body > div.container-fluid > div.selector > div.selector__wizard.selector__wizard--step-4 > div.text-center.mt-5.mb-5 > a")
 
         let downloadURL = await page.evaluate(() => {
-            let input = document.querySelector("#CopyDownloadURL")
+            let button = document.querySelector("body > div.container-fluid > div.selector > div.selector__wizard.selector__wizard--step-4 > div.text-center.mt-5.mb-5 > a")
             
-            return input.getAttribute("value");
+            return button.getAttribute("href");
         })
 
         downloadURLs += `${downloadURL}\n`
