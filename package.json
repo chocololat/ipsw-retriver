@@ -1,0 +1,26 @@
+{
+  
+  "name": "ipsw-retriever",
+  "version": "1.0.0",
+  "description": "A CLI tool to retrieve Apple CDN links shared on IPSW.me",
+  "main": "index.js",
+  "dependencies": {
+    "puppeteer": "^19.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/chocololat/ipsw-retriver",
+  "homepage": "https://github.com/chocololat/ipsw-retriver#readme",
+  "bin": "./index.js",
+  "keywords": [
+    "ipsw.me",
+    "ipsw",
+    "retriever",
+    "cli",
+    "npmtool"
+  ],
+  "author": "Mesa",
+  "license": "ISC"
+}
